@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>PerpustakaanKu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <h1>📚 PerpustakaanKu</h1>
+
+            <div class="nav-menu">
+
+                <a href="#home">Home</a>
+
+                <a href="#koleksi">Koleksi</a>
+
+                <a href="#tentang">Tentang</a>
+
+                <a href="#kontak">Kontak</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h2>
+                Selamat Datang di
+                <br>
+                PerpustakaanKu
+            </h2>
+
+            <p>
+                Temukan buku favoritmu
+                dan jelajahi berbagai cerita menarik.
+            </p>
+
+            <a href="#koleksi" class="btn">
+                📚 Lihat Koleksi
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         KOLEKSI BUKU
+    ========================== -->
+
+    <section id="koleksi" class="koleksi">
+
+        <h2>📚 Koleksi Buku</h2>
+
+        <p class="subtitle">
+            Temukan buku yang ingin kamu baca
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Cari judul atau penulis..."
+                onkeyup="cariBuku()">
+
+        </div>
+
+
+        <!-- KATEGORI -->
+
+        <div class="kategori">
+
+            <button onclick="filterBuku('semua')">
+                Semua
+            </button>
+
+            <button onclick="filterBuku('novel')">
+                Novel
+            </button>
+
+            <button onclick="filterBuku('pendidikan')">
+                Pendidikan
+            </button>
+
+            <button onclick="filterBuku('sejarah')">
+                Sejarah
+            </button>
+
+        </div>
+
+
+        <!-- DAFTAR BUKU -->
+
+        <div class="book-container">
+
+
+            <!-- BUKU 1 -->
+
+            <div class="book-card"
+                data-kategori="novel">
+
+                <div class="book-cover cover1">
+                    📕
+                </div>
+
+                <h3>Laskar Pelangi</h3>
+
+                <p>Andrea Hirata</p>
+
+                <span>Novel</span>
+
+                <button
+                    onclick="detailBuku('laskar')">
+
+                    📖 Baca Cerita
+
+                </button>
+
+            </div>
+
+
+            <!-- BUKU 2 -->
+
+            <div class="book-card"
+                data-kategori="novel">
+
+                <div class="book-cover cover2">
+                    📗
+                </div>
+
+                <h3>Bumi Manusia</h3>
+
+                <p>Pramoedya Ananta Toer</p>
+
+                <span>Novel</span>
+
+                <button
+                    onclick="detailBuku('bumi')">
+
+                    📖 Baca Cerita
+
+                </button>
+
+            </div>
+
+
+            <!-- BUKU 3 -->
+
+            <div class="book-card"
+                data-kategori="pendidikan">
+
+                <div class="book-cover cover3">
+                    📘
+                </div>
+
+                <h3>Belajar HTML & CSS</h3>
+
+                <p>Web Developer</p>
+
+                <span>Pendidikan</span>
+
+                <button
+                    onclick="detailBuku('html')">
+
+                    📖 Baca Cerita
+
+                </button>
+
+            </div>
+
+
+            <!-- BUKU 4 -->
+
+            <div class="book-card"
+                data-kategori="sejarah">
+
+                <div class="book-cover cover4">
+                    📙
+                </div>
+
+                <h3>Sejarah Indonesia</h3>
+
+                <p>R. Soekmono</p>
+
+                <span>Sejarah</span>
+
+                <button
+                    onclick="detailBuku('sejarah')">
+
+                    📖 Baca Cerita
+
+                </button>
+
+            </div>
+
+
+            <!-- BUKU 5 -->
+
+            <div class="book-card"
+                data-kategori="pendidikan">
+
+                <div class="book-cover cover5">
+                    📓
+                </div>
+
+                <h3>Matematika Dasar</h3>
+
+                <p>Tim Edukasi</p>
+
+                <span>Pendidikan</span>
+
+                <button
+                    onclick="detailBuku('matematika')">
+
+                    📖 Baca Cerita
+
+                </button>
+
+            </div>
+
+
+            <!-- BUKU 6 -->
+
+            <div class="book-card"
+                data-kategori="novel">
+
+                <div class="book-cover cover6">
+                    📔
+                </div>
+
+                <h3>Negeri 5 Menara</h3>
+
+                <p>Ahmad Fuadi</p>
+
+                <span>Novel</span>
+
+                <button
+                    onclick="detailBuku('menara')">
+
+                    📖 Baca Cerita
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         POPUP DETAIL BUKU
+    ========================== -->
+
+    <div
+        id="detailSection"
+        class="detail-section">
+
+        <div class="detail-box">
+
+            <!-- TOMBOL TUTUP -->
+
+            <button
+                class="close-btn"
+                onclick="tutupDetail()">
+
+                ✕
+
+            </button>
+
+
+            <!-- ISI DETAIL -->
+
+            <div id="detailContent">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         TENTANG
+    ========================== -->
+
+    <section id="tentang" class="tentang">
+
+        <h2>ℹ️ Tentang Perpustakaan</h2>
+
+        <p>
+            PerpustakaanKu adalah website
+            perpustakaan digital sederhana
+            untuk membantu pengunjung menemukan
+            berbagai koleksi buku dan membaca
+            informasi singkat mengenai buku.
+        </p>
+
+
+        <div class="info-container">
+
+            <div class="info">
+
+                <h3>500+</h3>
+
+                <p>
+                    Koleksi Buku
+                </p>
+
+            </div>
+
+
+            <div class="info">
+
+                <h3>200+</h3>
+
+                <p>
+                    Anggota
+                </p>
+
+            </div>
+
+
+            <div class="info">
+
+                <h3>50+</h3>
+
+                <p>
+                    Kategori
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         KONTAK
+    ========================== -->
+
+    <section id="kontak" class="kontak">
+
+        <h2>📞 Hubungi Kami</h2>
+
+        <p>
+            📍 Jl. Pendidikan No. 10, Indonesia
+        </p>
+
+        <p>
+            📧 perpustakaan@gmail.com
+        </p>
+
+        <p>
+            📱 0812-3456-7890
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 PerpustakaanKu
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
