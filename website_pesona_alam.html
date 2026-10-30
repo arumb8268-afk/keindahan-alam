@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jelajahi pesona pegunungan, pantai, dan air terjun Indonesia.">
+  <title>Pesona Alam Indonesia</title>
+  <style>
+    :root { --green:#1e5945; --light:#f4f7f1; --gold:#e5c27b; --ink:#20342b; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--light); line-height:1.6; }
+    header { position:absolute; top:0; left:0; width:100%; z-index:10; padding:22px 7%; display:flex; justify-content:space-between; align-items:center; color:white; }
+    .brand { font-weight:800; letter-spacing:.5px; font-size:1.1rem; }
+    nav { display:flex; gap:24px; }
+    nav a { color:white; text-decoration:none; font-size:.95rem; font-weight:600; }
+    nav a:hover { color:var(--gold); }
+    .hero { min-height:92vh; display:flex; align-items:center; padding:130px 8% 80px; color:white; background:linear-gradient(90deg,rgba(9,35,27,.78),rgba(9,35,27,.12)),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85') center/cover; }
+    .hero-content { max-width:650px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:3px; color:var(--gold); font-size:.8rem; font-weight:bold; margin-bottom:16px; }
+    h1 { font-size:clamp(2.7rem,7vw,5.7rem); line-height:1.05; margin-bottom:22px; }
+    .hero p { font-size:1.1rem; max-width:570px; color:#edf4ef; margin-bottom:30px; }
+    .button { display:inline-block; padding:13px 23px; border-radius:30px; text-decoration:none; background:var(--gold); color:#20342b; font-weight:700; transition:.2s; border:0; cursor:pointer; }
+    .button:hover { transform:translateY(-2px); filter:brightness(1.04); }
+    section { padding:82px 8%; }
+    .section-heading { text-align:center; max-width:700px; margin:0 auto 42px; }
+    .section-heading .eyebrow { color:#56846b; margin-bottom:8px; }
+    h2 { font-size:clamp(2rem,4vw,3rem); line-height:1.15; margin-bottom:14px; color:var(--green); }
+    .section-heading p { color:#607268; }
+    .intro { display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center; }
+    .intro img { width:100%; height:360px; object-fit:cover; border-radius:22px; }
+    .intro p { margin:14px 0; color:#5e6e64; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .card { background:white; border-radius:18px; overflow:hidden; box-shadow:0 10px 28px rgba(20,55,39,.08); transition:transform .25s; }
+    .card:hover { transform:translateY(-6px); }
+    .card img { width:100%; height:230px; object-fit:cover; display:block; }
+    .card-content { padding:22px; }
+    .tag { color:#528267; text-transform:uppercase; font-size:.75rem; font-weight:800; letter-spacing:1.5px; }
+    h3 { color:var(--green); margin:7px 0 9px; font-size:1.35rem; }
+    .card p { color:#63736a; font-size:.95rem; }
+    .quote { text-align:center; background:var(--green); color:white; padding:76px 8%; }
+    .quote blockquote { font-size:clamp(1.5rem,3vw,2.5rem); max-width:900px; margin:0 auto 18px; line-height:1.35; font-weight:700; }
+    .quote p { color:#d7e6dc; }
+    .tips { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:35px; }
+    .tip { padding:25px; background:white; border-radius:15px; border:1px solid #e2e9e1; }
+    .tip span { font-size:1.8rem; }
+    .tip h3 { font-size:1.1rem; }
+    footer { padding:28px 8%; background:#163e30; color:#d9e7de; text-align:center; font-size:.9rem; }
+    #topBtn { position:fixed; bottom:20px; right:20px; display:none; background:var(--gold); color:var(--ink); border:0; border-radius:50%; width:44px; height:44px; font-size:1.2rem; cursor:pointer; box-shadow:0 5px 15px #0002; }
+    @media(max-width:800px) {
+      header { padding:18px 5%; align-items:flex-start; gap:14px; flex-direction:column; }
+      nav { gap:14px; flex-wrap:wrap; }
+      nav a { font-size:.85rem; }
+      .hero { min-height:85vh; padding:150px 6% 65px; }
+      section { padding:62px 6%; }
+      .intro { grid-template-columns:1fr; gap:25px; }
+      .cards, .tips { grid-template-columns:1fr; }
+      .card img { height:250px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#beranda" style="color:white;text-decoration:none">🌿 PESONA ALAM</a>
+    <nav aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#destinasi">Destinasi</a>
+      <a href="#jaga-alam">Jaga Alam</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-content">
+        <div class="eyebrow">Jelajahi keajaiban Nusantara</div>
+        <h1>Alam Indah,<br>Hati Bahagia.</h1>
+        <p>Dari megahnya pegunungan hingga tenangnya lautan, Indonesia menyimpan keindahan yang selalu punya cerita untuk kita temukan.</p>
+        <a class="button" href="#destinasi">Jelajahi Keindahan ↓</a>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="intro">
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1100&q=85" alt="Hutan hijau dan suasana alam yang asri" loading="lazy">
+        <div>
+          <div class="eyebrow">Tentang keindahan alam</div>
+          <h2>Alam adalah anugerah yang berharga</h2>
+          <p>Keindahan alam bukan hanya tentang pemandangan yang memanjakan mata. Hutan, sungai, pantai, dan pegunungan menjadi rumah bagi berbagai makhluk hidup serta sumber kehidupan bagi manusia.</p>
+          <p>Melalui perjalanan mengenal alam, kita belajar untuk bersyukur, menghargai keanekaragaman hayati, dan menjaga bumi agar tetap indah untuk generasi mendatang.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinasi">
+      <div class="section-heading">
+        <div class="eyebrow">Sudut indah Indonesia</div>
+        <h2>Temukan Pesonanya</h2>
+        <p>Setiap tempat memiliki keunikan dan cerita. Berikut beberapa wajah alam yang membuat kita jatuh cinta pada Nusantara.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85" alt="Gunung tinggi dengan langit senja" loading="lazy">
+          <div class="card-content"><div class="tag">Jawa Timur</div><h3>Gunung Bromo</h3><p>Lautan pasir, kawah yang megah, dan pemandangan matahari terbit menjadikan kawasan Bromo salah satu lanskap alam paling ikonik di Indonesia.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=85" alt="Pulau tropis dikelilingi laut biru" loading="lazy">
+          <div class="card-content"><div class="tag">Nusa Tenggara Timur</div><h3>Taman Nasional Komodo</h3><p>Pulau-pulau berbukit, pantai cantik, dan perairan kaya kehidupan laut membuat kawasan ini istimewa. Satwa komodo hidup di habitat alaminya di sini.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85" alt="Pantai berpasir putih dengan air laut biru" loading="lazy">
+          <div class="card-content"><div class="tag">Bali</div><h3>Pantai Nusa Penida</h3><p>Tebing dramatis dan laut biru membuat Nusa Penida terkenal dengan panorama pesisir yang memukau. Tetap perhatikan keselamatan di area tebing dan ombak.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=900&q=85" alt="Air terjun mengalir di tengah pepohonan hijau" loading="lazy">
+          <div class="card-content"><div class="tag">Jawa Tengah</div><h3>Air Terjun Sekumpul</h3><p>Rimbunnya pepohonan dan aliran air yang jatuh dari ketinggian menghadirkan suasana sejuk. Periksa kondisi jalur dan cuaca sebelum berkunjung.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?auto=format&fit=crop&w=900&q=85" alt="Danau dan pegunungan hijau" loading="lazy">
+          <div class="card-content"><div class="tag">Sumatera Utara</div><h3>Danau Toba</h3><p>Danau vulkanik yang luas dikelilingi perbukitan hijau ini menawarkan panorama menenangkan sekaligus kekayaan budaya masyarakat setempat.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85" alt="Hutan tropis yang lebat" loading="lazy">
+          <div class="card-content"><div class="tag">Kalimantan</div><h3>Hutan Hujan Tropis</h3><p>Hutan tropis Kalimantan menyimpan keanekaragaman hayati yang luar biasa. Menjaga hutan berarti melindungi satwa, sumber air, dan keseimbangan iklim.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Puncak pegunungan yang menjulang" loading="lazy">
+          <div class="card-content"><div class="tag">Papua</div><h3>Pegunungan Papua</h3><p>Pegunungan yang megah dan bentang alam yang beragam memperlihatkan kekayaan alam Indonesia bagian timur. Kunjungi dengan pemandu dan hormati adat setempat.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=85" alt="Terumbu karang dan kehidupan bawah laut" loading="lazy">
+          <div class="card-content"><div class="tag">Papua Barat Daya</div><h3>Raja Ampat</h3><p>Gugusan pulau karst, air laut jernih, dan terumbu karang kaya spesies menjadikan Raja Ampat surga bagi pencinta laut dan penyelam.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85" alt="Lanskap hijau dan pepohonan di kawasan alam" loading="lazy">
+          <div class="card-content"><div class="tag">Sumatera</div><h3>Taman Nasional Gunung Leuser</h3><p>Kawasan hutan penting di Sumatera ini menjadi rumah bagi beragam satwa liar, termasuk orangutan Sumatera. Jelajahi secara bertanggung jawab bersama pemandu resmi.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Bentang alam pegunungan dan langit terbuka" loading="lazy">
+          <div class="card-content"><div class="tag">Jawa Timur</div><h3>Kawah Ijen</h3><p>Kawah vulkanik dengan danau berwarna hijau kebiruan ini menawarkan panorama unik. Sebelum mendaki, periksa informasi resmi mengenai cuaca, aktivitas vulkanik, dan aturan keselamatan.</p></div>
+        </article>
+      </div>
+      <p style="text-align:center;color:#718076;font-size:.85rem;margin-top:22px;">Catatan: gambar merupakan ilustrasi pemandangan alam; foto tidak selalu menggambarkan lokasi wisata yang disebutkan secara persis.</p>
+    </section>
+
+    <div class="quote">
+      <blockquote>“Kita tidak mewarisi bumi dari leluhur, kita meminjamnya dari generasi mendatang.”</blockquote>
+      <p>Jadikan kekaguman pada alam sebagai alasan untuk merawatnya.</p>
+    </div>
+
+    <section id="jaga-alam">
+      <div class="section-heading">
+        <div class="eyebrow">Mulai dari diri sendiri</div>
+        <h2>Jaga Alam, Jaga Masa Depan</h2>
+        <p>Keindahan alam akan tetap terjaga jika kita melakukan hal-hal sederhana secara bersama-sama.</p>
+      </div>
+      <div class="tips">
+        <div class="tip"><span>♻️</span><h3>Kurangi Sampah</h3><p>Bawa botol minum sendiri dan selalu bawa kembali sampah setelah berkunjung ke alam.</p></div>
+        <div class="tip"><span>🌱</span><h3>Lindungi Kehidupan</h3><p>Jangan merusak tanaman atau mengganggu satwa liar di habitat aslinya.</p></div>
+        <div class="tip"><span>💧</span><h3>Hemat Sumber Daya</h3><p>Gunakan air dan energi secukupnya demi lingkungan yang lebih lestari.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Pesona Alam Indonesia · Cintai alam, rawat keindahannya 🌿</p>
+  </footer>
+  <button id="topBtn" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const topBtn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => {
+      topBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+    });
+    topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
+</body>
+</html>
